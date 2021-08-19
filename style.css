@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ########################################################    TOP PAGE         ############################################################ */
+
+.top-page{
+    background:linear-gradient(rgba(70, 70, 70, 70%), rgba(0, 61, 173, 70%)), url("banner.png");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    justify-content: space-between;
+}
+
+.top-page .header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-page .header img{
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 56px;
+    padding-top: 3vh;
+    padding-left: 4vw;
+}
+
+.top-page .header ul{
+    display: flex;
+    list-style: none;
+    margin-right: 3vw;
+    padding-top: 5vh;
+    justify-content: center;
+}
+.header .top-items li{
+    margin: auto;
+    justify-items: center;
+}
+.header .top-items a{
+    text-decoration: none;
+    margin:0vw 1.25vw;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+
+.header .top-items li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    display: block;
+    background-color: brown;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.header .top-items li:hover::after{
+    content: "";
+    width: 70%;
+}
+
+
+.intro-center{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 25%;
+}
+
+
+.intro-center h1{
+    font-size: 3rem;
+    color: white;
+    padding-bottom: 1vh;
+}
+
+
+.intro-center p{
+    font-size: 1rem;
+    font-weight: lighter;
+    color: white;
+    padding: 3vh 0.5vh 10vh 0.5vh;
+}
+
+
+.intro-center a{
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    text-decoration: none;
+    width: 10%;
+    background-color: transparent;
+    transition: 0.5s;
+    font-size: 20px;
+}
+
+.intro-center a:hover{
+    background-color: #b10000;
+    opacity: 0.8;
+}
+
+/* ########################################################  RESPONSIVE FOR TOP PAGE             ############################################################ */
+@media (max-width:600px){
+    
+    .top-page{
+        width: 100vw;
+        height: 70vh;
+}
+    .top-page .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .top-page .header img{
+        display: block;
+        margin: auto;
+    }
+
+    .top-page .header ul{
+        margin-right: 1.5vw;
+    }
+    .header .top-items a{
+        font-size: 10px;
+    }
+    
+    .intro-center{
+        top: 15%;
+    }
+
+    .intro-center h1{
+        font-size: 2rem;
+    }
+
+    .intro-center p{
+        font-size: 0.7rem;
+        padding: 2vh 0.5vh 8vh 0.5vh;
+    }
+
+
+    .intro-center a{
+        font-size: 10px;
+    }
+}
+
+
+/* ########################################################   COURSES PAGE             ############################################################ */
+
+.course-page{
+    background-color: white;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-heading h1{
+    width: 100vw;
+    height: 5vh;
+    display: block;
+    padding: 10vh 0vh 2vh 0vh;
+    text-align: center;
+    font-size: 40px;
+}
+
+.course-sub-heading p{
+    height: 5vh;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    color: rgb(151, 151, 151);
+}
+
+
+.course-types{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding: 10vh 2.5vw 5vh 2.5vw;
+}
+
+
+.course-types .course-type-intermediate{
+    width: 100%;
+    padding: 30px;
+    background-color: rgb(255, 241, 240);
+    margin: 0px 1.5vw;
+    box-shadow:-2px -2px 20px white;
+    transition: 1s;
+}
+
+
+.course-types .course-type-intermediate:hover{
+    background-color: rgb(239, 200, 255);
+    box-shadow:-2px -2px 40px rgb(0, 0, 0);
+}
+
+
+
+.course-types .course-type-degree{
+    width: 100%;
+    padding: 30px;
+    background-color: rgb(255, 241, 240);
+    margin: 0px 1.5vw;
+    transition: 1s;
+}
+
+
+.course-types .course-type-degree:hover{
+    background-color: rgb(195, 255, 255);
+    box-shadow:-2px -2px 40px rgb(0, 0, 0);
+}
+
+.course-types .course-type-post-graduation{
+    width: 100%;
+    padding: 30px;
+    background-color: rgb(255, 241, 240);
+    margin: 0px 1.5vw;
+    transition: 1s;
+}
+
+.course-types .course-type-post-graduation:hover{
+    background-color: rgb(212, 247, 181);
+    box-shadow:-2px -2px 40px rgb(0, 0, 0);
+}
+
+.course-types h1{
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 15px;
+    font-weight: 600;
+}
+
+.course-types p{
+    text-align: center;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+/* ###########################################  RESPONSIVE FOR COURSES PAGE      ################################################################# */
+@media (max-width:900px){
+    .course-types{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* .course-heading h1{
+        font-size: 20px;
+    } */
+    
+    .course-sub-heading p{
+        font-size: 10px;
+    }
+
+    .course-types .course-type-intermediate{
+        margin: 2vh 15vw;
+    }
+
+    .course-types .course-type-degree{
+        margin: 2vh 15vw;
+    }
+
+    .course-types .course-type-post-graduation{
+        margin: 2vh 15vw;
+    }
+}
